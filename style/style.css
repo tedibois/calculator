@@ -1,0 +1,21 @@
+@font-face {
+    font-family: font;
+    src: url(fonts/Rustproof\ Body.otf);
+}
+@font-face {
+    font-family: font2;
+    src: url(fonts/MisterFirley.otf);
+}
+@font-face {
+    font-family: font3;
+    src: url(fonts/Vipnagorgialla\ Bd.otf);
+}
+h1 {
+    font-family: font3;
+    color:rgb(175, 28, 207);
+    }
+.musicbox {
+position:absolute;
+right:0%;
+bottom: 0%;
+}
