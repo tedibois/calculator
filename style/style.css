@@ -98,3 +98,6 @@ footer{
 a{
     color: rgb(217, 228, 238);
 }
+table, td, th {
+    border: 1px solid black;
+  }
