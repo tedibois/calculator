@@ -10,12 +10,94 @@
     font-family: font3;
     src: url(fonts/Vipnagorgialla\ Bd.otf);
 }
+*{
+font-family: font3;
+}
 h1 {
     font-family: font3;
-    color:rgb(175, 28, 207);
-    }
-.musicbox {
-position:absolute;
-right:0%;
-bottom: 0%;
+    color: rgb(226, 226, 226);
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
+
+.musicbox {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+
+#calculator {
+    margin-top: 5rem;
+    margin: auto;
+    width: 20rem;
+    max-inline-size: 22rem;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+#display {
+    font-size: 2rem;
+    text-align: center;
+    background: hsl(202, 11%, 29%);
+    color: hsl(255, 100%, 100%);
+
+}
+
+#buttons {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    background: hsl(207, 19%, 61%);
+}
+
+.number,
+.operator,
+#equals,
+#clear,
+.decimal {
+    background: hsl(210, 25%, 95%);
+    border: none;
+    font-size: 1.7rem;
+    inline-size: 60px;
+    block-size: 60px;
+    border-radius: 40px;
+    margin: 0.25rem;
+     
+}
+
+.number:active,
+.operator:active,
+#equals:active,
+#clear:active,
+.decimal:active {
+    box-shadow: inset 0 0px 50px rgba(0, 0, 0, 0.25);
+    transform: translateY(1px);
+}
+
+.operator {
+    background: hsl(208, 25%, 86%);
+}
+#equals {
+  grid-column: 4 / 5;
+  grid-row: 2 / span 4;
+  background: hsl(357, 100%, 72%);
+  height: auto;
+}
+footer{
+    font-size: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(184, 203, 221);
+    text-align: center;
+}
+a{
+    color: rgb(217, 228, 238);
+}
+table, td, th {
+    border: 1px solid black;
+  }
