@@ -63,4 +63,54 @@ numberButtons.forEach(button => {
     }
 });
 });
+
+
+
+
 const operatorButtons = document.querySelectorAll(".operator");
+
+const equalsButton = document.getElementById("equals");
+
+const tanks = document.getElementById("tanks");
+
+
+
+operatorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        currentOperator = button.textContent;
+        display.textContent = currentOperator;
+    });
+});
+
+
+
+
+equalsButton.addEventListener("click", () => {
+    if (firstNumber && secondNumber && currentOperator) {
+        const a = parseFloat(firstNumber);
+        const b = parseFloat(secondNumber);
+        const result = operate(currentOperator, a, b);
+
+        display.textContent = result;
+        firstNumber = result.toString();
+        secondNumber = "";
+        currentOperator = null;
+
+        // Show image if result is 1989
+        if (result === 1989) {
+            tanks.innerHTML = `<img src="style/images/tanks.webp" alt="1989">`;
+        } else {
+            tanks.innerHTML = ""; // Clear if not 1989
+        }
+    }
+});
+
+const clearButton = document.getElementById("clear");
+clearButton.addEventListener("click", () => {
+    firstNumber = "";
+    secondNumber = "";
+    currentOperator = null;
+    resultDisplayed = false;
+    display.textContent = "0";
+    tanks.innerHTML = "";
+});
